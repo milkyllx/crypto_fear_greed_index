@@ -1,0 +1,12 @@
+-- ----------------------------
+-- Table structure for `index_fear_greed`
+-- ----------------------------
+CREATE TABLE `index_fear_greed` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `value` int(10) NOT NULL,
+  `value_classification` varchar(50) NOT NULL,
+  `timestamp` bigint(20) NOT NULL,
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `timestamp` (`timestamp`)
+)
