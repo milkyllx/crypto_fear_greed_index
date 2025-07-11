@@ -45,7 +45,7 @@ pip install pymysql requests apscheduler
 #### 4.1 创建数据库
 使用以下命令在 MySQL 中创建数据库：
 ```sql
-CREATE DATABASE crypto_follow CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE crypto_bot CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
 #### 4.2 创建数据表
@@ -68,8 +68,8 @@ CREATE TABLE `index_fear_greed` (
 DB_CONFIG = {
     'host': 'localhost',          # 数据库地址
     'user': 'root',               # 数据库用户名
-    'password': 'juxue654321A!',  # 数据库密码
-    'database': 'crypto_follow',  # 数据库名称
+    'password': '<你的密码>',  # 数据库密码
+    'database': 'crypto_bot',  # 数据库名称
     'charset': 'utf8'             # 字符集
 }
 ```
