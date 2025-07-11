@@ -7,13 +7,13 @@ from urllib3 import Retry
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Fetch Fear and Greed Index data
-def fetch_fng_data():
+def fetch_fng_data(limit):
     session = requests.Session()
     retries = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
     session.mount('https://', HTTPAdapter(max_retries=retries))
 
     url = 'https://api.alternative.me/fng/'
-    params = {'limit': 1, 'format': 'json'}
+    params = {'limit': limit, 'format': 'json'}
     try:
         response = session.get(url, params=params, timeout=10)
         response.raise_for_status()
